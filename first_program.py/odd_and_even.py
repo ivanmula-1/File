@@ -44,3 +44,10 @@ def generate_terminal_summary(self):
 def distribute_data(self):
         self._finalize_outputs()
         self.generate_terminal_summary()
+
+    if __name__ == "__main__":
+    try:
+        pipeline = DataStreamer("numbers.txt")
+        pipeline.distribute_data()
+    except Exception as e:
+        print(f"Error occurred: {e}")
