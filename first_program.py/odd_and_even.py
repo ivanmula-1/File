@@ -20,3 +20,10 @@ def _yield_integers(self):
             for line in stream:
                 if line.strip():
                     yield int(line.strip())
+def distribute_data(self):
+        for val in self._yield_integers():
+            if val % 2 == 0:
+                self.even_collection.append(str(val))
+            else:
+                self.odd_collection.append(str(val))
+        self._finalize_outputs()
