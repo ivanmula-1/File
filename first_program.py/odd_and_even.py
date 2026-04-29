@@ -27,3 +27,11 @@ def distribute_data(self):
             else:
                 self.odd_collection.append(str(val))
         self._finalize_outputs()
+def _finalize_outputs(self):
+        mapping = {
+            "even_results.txt": self.even_collection,
+            "odd_results.txt": self.odd_collection
+        }
+        for path, contents in mapping.items():
+            with open(path, "w") as f:
+                f.write("\n".join(contents))
