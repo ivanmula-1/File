@@ -35,7 +35,12 @@ def _finalize_outputs(self):
         for path, contents in mapping.items():
             with open(path, "w") as f:
                 f.write("\n".join(contents))
+                
 def generate_terminal_summary(self):
         print(f"{ANSIFormatter.EMERALD}--- TASK COMPLETE ---{ANSIFormatter.END}")
         print(f"{ANSIFormatter.VIOLET}Evens: {len(self.even_collection)}")
         print(f"{ANSIFormatter.AQUA}Odds:  {len(self.odd_collection)}{ANSIFormatter.END}")
+
+def distribute_data(self):
+        self._finalize_outputs()
+        self.generate_terminal_summary()
