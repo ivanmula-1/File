@@ -11,3 +11,6 @@ class DataStreamer:
         self.target_file = target_file
         self.even_collection = []
         self.odd_collection = []
+def _validate_source(self):
+        if not os.path.exists(self.target_file):
+            raise FileNotFoundError(f"Missing: {self.target_file}")
