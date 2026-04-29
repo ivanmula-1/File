@@ -14,3 +14,9 @@ class DataStreamer:
 def _validate_source(self):
         if not os.path.exists(self.target_file):
             raise FileNotFoundError(f"Missing: {self.target_file}")
+def _yield_integers(self):
+        self._validate_source()
+        with open(self.target_file, 'r') as stream:
+            for line in stream:
+                if line.strip():
+                    yield int(line.strip())
